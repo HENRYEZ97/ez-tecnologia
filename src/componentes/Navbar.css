@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+    background-color: #111111;
+    color: white;
+    border-bottom: 2px solid #30363D;
+    box-shadow: 0 80px 300px rgba(0, 0, 0, 0.9);
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+}
+/*RESPONSIVIDADE NAVBAR*/
+@media (max-width: 1024px) {
+    .navbar{
+        display: flex;
+        align-items: right;
+        text-align: right;
+    }
+}
+
+.hamburguer{
+    display: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar-links{
+    display: flex;
+    gap: 1rem;
+}
+@media (max-width: 768px) {
+    .hamburguer{
+        display: flex;
+        font-size: 1.9rem;
+        cursor: pointer;
+        align-items: center;
+    }
+    .navbar-links{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 1.5rem;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+        background-color: #111111;
+    }
+    .navbar button{
+        width: 100%;
+    }
+    .navbar-links.ativo {
+        display: flex;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .navbar h2{
+        display: flex;
+        margin: 0;
+        align-items: center;
+    }
+}
+
+
+
+
+

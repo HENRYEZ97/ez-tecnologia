@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.paragrafo-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.lande-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(135deg, #0d1117, #161b22);
+    min-height: 100vh;
+}
+
+.lande-container h1{
+    font-size: 3rem;
+    color: #ccc;
+}
+
+.lande-container p{
+    font-size: 1.5rem;
+    color: #ccc;
+}
+
+.botao-ver-produtos{
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-top: 2rem;
+}
+
+.lande-container a {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+.botao-ver-produtos:hover{
+    background-color: #1f6feb;
+}
+
+.textos-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/*estilo dos banners*/
+.banners-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    margin-bottom: 25px;
+    padding: 2rem;
+    margin-top: 30px;
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.9);
+}
+.banner-card {
+    padding: 2rem;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+.banner-img {
+    width: 333px;
+    max-width: 333px;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+.banner-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+.banners-container h3{
+    color: whitesmoke;
+}
+
+
+/*estilização feita de neon*/
+.neon1 {
+    background: linear-gradient(135deg, #00f0ff, #0077ff);
+}
+.neon2 {
+    background: linear-gradient(135deg, #00ff95, #00b37f);
+}
+.neon3 {
+    background: linear-gradient(135deg, #9c27b0, #7b1fa2);
+}
+.neon4 {
+    background: linear-gradient(135deg, #ff6d00, #ff9800);
+}
+
+/*RESPONSIVIDADE 768PX*/
+@media (max-width: 768px) {
+    .banners-container {
+        width: 100%;
+        max-width: 20px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 10px 16px rgba(0, 0, 0, 0.9);
+    }
+}
+/*RESPONSIVIDADE 1024PX*/
+@media (max-width: 1024px) {
+    .banners-container {
+        display: flex;
+        width: 100%;
+        padding: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+        max-width: 20px;
+        box-shadow: 0 10px 16px rgba(0, 0, 0, 0.9);
+    }
+}
+/*RESPONSIVIDADE 375PX*/
+@media (max-width: 375px) {
+    .banners-container {
+        display: flex;
+        width: 100%;
+        padding: 50px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 3rem;
+        max-width: 20px;
+        box-shadow: 0 10px 16px rgba(0, 0, 0, 0.9);
+    }
+}
+/*RESPONSIVIDADE 360PX*/
+@media (max-width: 360px) {
+    .banners-container {
+        display: flex;
+        width: 100%;
+        padding: 30px;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        box-shadow: 0 10px 16px rgba(0, 0, 0, 0.9);
+    }
+}
+
+/*HOME INÍCIO*/
+.home-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out, transform 0.5s ease-in-out;
+    background-repeat: no-repeat;
+    box-shadow: 0 12px 16px rgb(0, 0, 0);
+    position: relative;
+    height: 450px;
+    overflow: hidden;
+}
+/*EFEITO ESCURO*/
+.home-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+    pointer-events: none;
+}
