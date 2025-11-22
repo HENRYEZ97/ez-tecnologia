@@ -47,16 +47,16 @@ export default function CadastroUsuario () {
 
             return (
                 <div className="container">
-                <div className="centralizar">
+                  <div className="centralizar">
                 <div className="cadastro-container">
                     <h2>Cadastro de Usuário</h2>
-                    <form onSubmit={handleSubmit} className="cadastro-form">
+                        <form onSubmit={handleSubmit} className="cadastro-form">
                         <div className="form-group">
                             <label>Nome:</label>
-                            <div className="input-icon">
+                                <div className="input-icon">
                                 <User/>
                             <input type="text" name="nome" className="form-input" value={usuario.nome} onChange={handleChange} required />
-                        </div>
+                            </div>
                         </div>
 
                         <div className="form-group">
@@ -64,24 +64,24 @@ export default function CadastroUsuario () {
                             <div className="input-icon">
                                 <Mail/>
                             <input type="email" name="email" className="form-input" value={usuario.email} onChange={handleChange} required />
-                        </div>
-                        </div>
+                            </div>
+                            </div>
 
-                        <div className="form-group">
+                            <div className="form-group">
                             <label>Senha:</label>
                             <div className="input-icon">
                                 <Lock/>
                             <input type="password" name="senha" className="form-input" value={usuario.senha} onChange={handleChange} required />
-                        </div>
-                        </div>
+                           </div>
+                         </div>
 
-                        <div className="form-actions">
+                            <div className="form-actions">
                             <button type="submit">Cadastrar</button>
                             <button type="button" onClick={() => navigate("/")}>Voltar</button>
                         </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
-                </div>
-                </div>
+            </div>
             );
         }
