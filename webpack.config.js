@@ -2,11 +2,12 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "development",
+  mode: "production", // ← Mude para production no build
   entry: "./src/index.tsx",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
+    publicPath: "/", // ← ADICIONE ESTA LINHA (IMPORTANTE)
     clean: true,
   },
   resolve: {
@@ -21,23 +22,17 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ["style-loader",
-          "css-loader"],
+        use: ["style-loader", "css-loader"],
       },
-      {test: /\.(png|jpe?g|gif|svg)$/i,
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
         type: "asset/resource",
       },
     ],
   },
-
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
   ],
-  devServer: {
-    static: "./dist",
-    port: 3000,
-    hot: true,
-  },
 };
