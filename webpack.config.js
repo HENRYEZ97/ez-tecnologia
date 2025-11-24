@@ -2,13 +2,25 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "production", // ← Mude para production no build
+  mode: "development", // ← deixe development no dev, production no build
   entry: "./src/index.tsx",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: "/", // ← ADICIONE ESTA LINHA (IMPORTANTE)
+    publicPath: "/",
     clean: true,
+  },
+  devServer: {
+    static: path.join(__dirname, "public"),
+    open: true,
+    hot: true,
+    historyApiFallback: true,
+    client: {
+      overlay: {
+        errors: true,   // ← mostra apenas erros reais
+        warnings: false // ← ESCONDE WARNING (sumiu do navegador!)
+      },
+    },
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
